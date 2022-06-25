@@ -9,7 +9,7 @@ Pause::
   MsgBox 4, windowTitle, ¿Desea apagar el sistema?
 
   IfMsgBox Yes
-    Shutdown 4
+    Shutdown 5
 return
 
 ; Unset some keys.
