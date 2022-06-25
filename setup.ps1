@@ -1,4 +1,7 @@
-#!/bin/sh
+# Setup minimal accessibility configuration for an older adult.
+#
+# Before running, make sure to set the execution policy to unrestricted:
+# set-executionPolicy -scope currentUser unrestricted
 
 # Verify admin priviliges are granted for the current session.
 function has-admin-privilege {
