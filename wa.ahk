@@ -1,13 +1,12 @@
 ﻿#SingleInstance Force
 
-; Title for any pop-up AHK window.
-windowTitle := "Asistente de accesibilidad"
+; See list of keys: https://www.autohotkey.com/docs/KeyList.htm
 
 #IfWinNotActive ahk_exe gvim.exe
-  ; Facilitate shutting down the computer.
+  ; Hold Pause to turn off the computer.
   Pause::
-    MsgBox 4, windowTitle, ¿Desea apagar el sistema?
-    IfMsgBox Yes
+    KeyWait Pause, T3
+    if (ErrorLevel = 1)
       Shutdown 5
   return
 
@@ -15,7 +14,6 @@ windowTitle := "Asistente de accesibilidad"
   CapsLock::Backspace
 
   ; Unset some keys.
-  ; See list of keys: https://www.autohotkey.com/docs/KeyList.htm
   AppsKey::return
 #IfWinNotActive
 
