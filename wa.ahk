@@ -1,4 +1,4 @@
-﻿; vim:textwidth=70:colorcolumn=70
+﻿; vim:textwidth=80:colorcolumn=80:comments+=\:;
 
 #SingleInstance Force
 
@@ -12,8 +12,7 @@
       Shutdown 5
   return
 
-  ; Remap caps lock to basckspace, and disable auto key repetition
-  ; when it is held down.
+  ; Remap caps lock to basckspace, and disable auto repetition when held down.
   CapsLock::
     Send {Backspace}
     KeyWait CapsLock
