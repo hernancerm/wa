@@ -1,4 +1,6 @@
-﻿#SingleInstance Force
+﻿; vim:textwidth=70:colorcolumn=70
+
+#SingleInstance Force
 
 ; See list of keys: https://www.autohotkey.com/docs/KeyList.htm
 
@@ -10,8 +12,12 @@
       Shutdown 5
   return
 
-  ; Remap caps lock to basckspace.
-  CapsLock::Backspace
+  ; Remap caps lock to basckspace, and disable auto key repetition
+  ; when it is held down.
+  CapsLock::
+    Send {Backspace}
+    KeyWait CapsLock
+  return
 
   ; Unset some keys.
   AppsKey::return
