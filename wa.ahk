@@ -18,6 +18,12 @@
     KeyWait CapsLock
   return
 
+  ; Disable auto repetation when enter is held down.
+  Enter::
+    Send {Enter}
+    KeyWait Enter
+  return
+
   ; Unset some keys.
   AppsKey::return
 #IfWinNotActive
