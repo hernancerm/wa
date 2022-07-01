@@ -25,8 +25,8 @@
   AppsKey::return
 #IfWinNotActive
 
-; Enter
-; -----
+; Enter-related
+; -------------
 
 #IfWinActive ahk_exe notepad.exe
   ; Disable auto repetation when enter is held down.
@@ -46,9 +46,9 @@
     KeyWait Enter
   return
 
-  ; Hold shift+enter for 3s to trigger regular enter.
-  +Enter::
-    KeyWait Enter, T3
+  ; Keep pressed f12 for 3s to trigger regular enter.
+  F12::
+    KeyWait F12, T3
     if (ErrorLevel = 1)
       Send {Enter}
   return
