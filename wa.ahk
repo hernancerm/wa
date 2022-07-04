@@ -1,4 +1,4 @@
-﻿; vim:textwidth=80:colorcolumn=80:comments+=\:;
+﻿; vim:fenc=utf-8:tw=80:com+=\:;
 
 #SingleInstance Force
 
@@ -6,6 +6,10 @@
 
 ; Basics
 ; ------
+
+; Use left-handed mouse.
+LButton::RButton
+RButton::LButton
 
 #IfWinNotActive ahk_exe gvim.exe
   ; Hold Pause to turn off the computer.
@@ -52,5 +56,8 @@
     if (ErrorLevel = 1)
       Send {Enter}
   return
+
+  ; Disable numbad enter.
+  NumpadEnter::return
 #IfWinActive
 
